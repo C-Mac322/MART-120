@@ -1,0 +1,65 @@
+<html>
+	<head>
+		<title>Page Threest</title>
+		<link rel="stylesheet" type="text/css" href="hw7_styles.css">
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+		<script>
+			function validateform()
+			{
+				var fnamegiven = document.getElementById("firstName").value;
+					if(fnamegiven == "")
+					{
+						window.alert("Please enter your first name.")
+						document.getElementById("firstName").style.backgroundColor = "red";
+						document.getElementById("firstName").focus();
+					}
+				var lnamegiven = document.getElementById("lastName").value;
+					if(lnamegiven == "")
+					{
+						window.alert("Please enter your last name.")
+						document.getElementById("lastName").style.backgroundColor = "red";
+						document.getElementById("lastName").focus();
+					}
+				var emailgiven = document.getElementById("email").value;
+					if(emailgiven == "")
+					{
+						window.alert("Please enter your email address.")
+						document.getElementById("email").style.backgroundColor = "red";
+						document.getElementById("email").focus();
+					}
+				var toaanswer = document.getElementById("agreeyes").required;
+					if(document.getElementById("agreeyes").checked) 
+					{
+					window.alert("Your info is - " + "First Name: " + fnamegiven + " Last Name: " + lnamegiven + " Email: " + emailgiven + " TOA: " + toaanswer);
+					}else if(document.getElementById("agreeno").checked) 
+					{
+					window.alert("In order to continue, you must agree to the Terms of Agreement.")
+					}	
+			}
+		</script>
+	</head>
+		<a style="font-style:italic">
+		<h3>Leave your information</h3>
+		</a>
+		<form>
+			First Name: <input type="text" id="firstName"><br>
+			Last Name: <input type="text" id="lastName"><br>
+			Email: <input type="text" id="email"><br>
+			<br/>
+			<p>Do you accept the <a id="bluemode">Terms of Agreement</a> -</p>
+			<input type="radio" id="agreeyes" name="agreementbutton" value="Yes" required>Yee
+    			<input type="radio" id="agreeno" name="agreementbutton" value="No">Nee
+			<p><br>
+			<button id="accepttoa" onclick="validateform();" type="button">Your Choice is Final</button>
+			</pa>
+		</form>
+		<div id="contactResult"></div>
+	<br/>
+	<br/>
+	<p>Return to - <a href="Homework 8_Homepage.html">Homepage</a></p>
+	<p>Return to - <a href="page2st.html">Page Two</a></p>
+</html>

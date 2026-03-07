@@ -1,0 +1,10 @@
+<button id="contactsubmit" onclick="getinfo();" type="button">Submit</button>
+ 		 </form>
+
+function getinfo()
+			{
+				var fnamegiven = document.getElementById("firstName").value;
+				var lnamegiven = document.getElementById("lastName").value;
+				var emailgiven = document.getElementById("email").value;
+				window.alert("Your info is - " + "First Name: " + fnamegiven + " Last Name: " + lnamegiven + " Email: " + emailgiven);
+			}
