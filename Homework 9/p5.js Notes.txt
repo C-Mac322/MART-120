@@ -1,0 +1,5 @@
+p5.js Notes
+
+textSize(20);
+      text("X: " + mouseX,10,25 );
+      text("Y: " + mouseY,10,45 );
